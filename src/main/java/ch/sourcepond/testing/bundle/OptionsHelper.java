@@ -5,6 +5,7 @@ import static org.ops4j.pax.exam.CoreOptions.bundle;
 import static org.ops4j.pax.exam.CoreOptions.composite;
 import static org.ops4j.pax.exam.CoreOptions.frameworkProperty;
 import static org.ops4j.pax.exam.CoreOptions.junitBundles;
+import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
 
 import java.net.URL;
 
@@ -23,7 +24,8 @@ public class OptionsHelper {
 	public static Option defaultOptions() {
 		final URL integrationTestJar = OptionsHelper.class.getResource(INTEGRATION_TEST_JAR);
 		assertNotNull(INTEGRATION_TEST_JAR + " could not be found in classpath!", integrationTestJar);
-		return composite(bundle(integrationTestJar.toString()),
+		return composite(mavenBundle("org.apache.commons", "commons-lang3").versionAsInProject(),
+				bundle(integrationTestJar.toString()),
 				frameworkProperty("felix.bootdelegation.implicit").value("false"), junitBundles());
 	}
 }
