@@ -41,7 +41,6 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- Testing -->
 			<dependency>
 				<groupId>org.ops4j.pax.exam</groupId>
 				<artifactId>pax-exam-container-native</artifactId>
@@ -81,7 +80,11 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- Testing -->
+		<dependency>
+			<scope>compile</scope>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.ops4j.pax.exam</groupId>
 			<artifactId>pax-exam-container-native</artifactId>
