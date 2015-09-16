@@ -25,7 +25,7 @@ public class OptionsHelper {
 		final URL integrationTestJar = OptionsHelper.class.getResource(INTEGRATION_TEST_JAR);
 		assertNotNull(INTEGRATION_TEST_JAR + " could not be found in classpath!", integrationTestJar);
 		return composite(mavenBundle("org.apache.commons", "commons-lang3").versionAsInProject(),
-				bundle(integrationTestJar.toString()),
+				mavenBundle("org.mockito", "mockito-all").versionAsInProject(), bundle(integrationTestJar.toString()),
 				frameworkProperty("felix.bootdelegation.implicit").value("false"), junitBundles());
 	}
 }
