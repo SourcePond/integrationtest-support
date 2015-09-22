@@ -135,8 +135,8 @@
 		</dependency>
 		<dependency>
 			<scope>compile</scope>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-jcdi_1.0_spec</artifactId>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
 		</dependency>
 		<dependency>
 			<scope>compile</scope>
