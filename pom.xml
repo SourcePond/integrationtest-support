@@ -18,10 +18,10 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ch.sourcepond.testing</groupId>
-	<artifactId>bundle-integrationtest</artifactId>
+	<artifactId>osgi-support</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>OSGi-bundle base-POM</name>
+	<name>Support project for OSGi integration tests</name>
 	<inceptionYear>2015</inceptionYear>
 	<description>
 		This project contains all necessary dependencies and helpers to create OSGi integration-tests for bundles published by SourcePond.
