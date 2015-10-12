@@ -12,14 +12,12 @@
 		OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
 		the specific language governing permissions and limitations under the License. -->
 	<parent>
-		<groupId>ch.sourcepond</groupId>
-		<artifactId>osgi</artifactId>
+		<groupId>ch.sourcepond.testing</groupId>
+		<artifactId>integrationtest-support</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ch.sourcepond.testing</groupId>
 	<artifactId>osgi-support</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 	<name>Support project for OSGi integration tests</name>
 	<inceptionYear>2015</inceptionYear>
@@ -28,16 +26,11 @@
 	</description>
 
 	<properties>
-		<!-- Plugin versions -->
-		<maven-bundle-plugin.version>2.5.4</maven-bundle-plugin.version>
-
 		<!-- Dependency versions -->
 		<org.osgi.core.version>5.0.0</org.osgi.core.version>
-		<pax-exam.version>4.6.0</pax-exam.version>
 		<pax-url.version>2.4.1</pax-url.version>
 		<pax-url-wrap.version>2.4.3</pax-url-wrap.version>
 		<org.apache.felix.version>5.0.1</org.apache.felix.version>
-		<logback-core.version>1.1.3</logback-core.version>
 	</properties>
 
 	<dependencyManagement>
@@ -45,11 +38,6 @@
 			<dependency>
 				<groupId>org.ops4j.pax.exam</groupId>
 				<artifactId>pax-exam-container-native</artifactId>
-				<version>${pax-exam.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.ops4j.pax.exam</groupId>
-				<artifactId>pax-exam-junit4</artifactId>
 				<version>${pax-exam.version}</version>
 			</dependency>
 			<dependency>
@@ -71,16 +59,6 @@
 				<groupId>org.apache.felix</groupId>
 				<artifactId>org.apache.felix.framework</artifactId>
 				<version>${org.apache.felix.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-core</artifactId>
-				<version>${logback-core.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-classic</artifactId>
-				<version>${logback-core.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.ops4j.pax.cdi</groupId>
@@ -112,10 +90,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.ops4j.pax.exam</groupId>
-			<artifactId>pax-exam-junit4</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.ops4j.pax.exam</groupId>
 			<artifactId>pax-exam-link-mvn</artifactId>
 		</dependency>
 		<dependency>
@@ -129,14 +103,6 @@
 		<dependency>
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.framework</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
