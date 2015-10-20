@@ -26,6 +26,12 @@
 	<description>
 		This project contains all necessary dependencies and helpers to create integration-tests for bundles published by SourcePond.
 	</description>
+	
+	<modules>
+		<module>cdi-support</module>
+		<module>osgi-support</module>
+		<module>sisu-test-support</module>
+	</modules>
 
 	<dependencies>
 		<dependency>
