@@ -28,9 +28,9 @@
 	</description>
 	
 	<modules>
-		<module>cdi-support</module>
-		<module>osgi-support</module>
-		<module>sisu-test-support</module>
+		<module>test-support-cdi</module>
+		<module>test-support-osgi</module>
+		<module>test-support-sisu</module>
 	</modules>
 
 	<dependencies>
