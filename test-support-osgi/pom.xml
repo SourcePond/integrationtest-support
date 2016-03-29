@@ -12,12 +12,15 @@
 		OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
 		the specific language governing permissions and limitations under the License. -->
 	<parent>
-		<groupId>ch.sourcepond.testing</groupId>
-		<artifactId>test-support</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+		<groupId>ch.sourcepond</groupId>
+		<artifactId>build</artifactId>
+		<version>0.3.0-SNAPSHOT</version>
+		<relativePath />
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>test-support-osgi</artifactId>
+	<groupId>ch.sourcepond.testing</groupId>
+	<artifactId>bundle-test-support</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 	<name>Support project for OSGi integration tests</name>
 	<inceptionYear>2015</inceptionYear>
@@ -25,131 +28,11 @@
 		This project contains all necessary dependencies and helpers to create OSGi integration-tests for bundles published by SourcePond.
 	</description>
 
-	<properties>
-		<!-- Dependency versions -->
-		<org.osgi.core.version>5.0.0</org.osgi.core.version>
-		<pax-url.version>2.4.1</pax-url.version>
-		<pax-url-wrap.version>2.4.3</pax-url-wrap.version>
-		<org.apache.felix.version>5.0.1</org.apache.felix.version>
-	</properties>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.ops4j.pax.exam</groupId>
-				<artifactId>pax-exam-container-native</artifactId>
-				<version>${pax-exam.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.ops4j.pax.exam</groupId>
-				<artifactId>pax-exam-link-mvn</artifactId>
-				<version>${pax-exam.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.ops4j.pax.url</groupId>
-				<artifactId>pax-url-aether</artifactId>
-				<version>${pax-url.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.ops4j.pax.url</groupId>
-				<artifactId>pax-url-wrap</artifactId>
-				<version>${pax-url-wrap.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>org.apache.felix.framework</artifactId>
-				<version>${org.apache.felix.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.ops4j.pax.cdi</groupId>
-				<artifactId>pax-cdi-openwebbeans</artifactId>
-				<version>${pax-cdi-api.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.ops4j.pax.cdi</groupId>
-				<artifactId>pax-cdi-test-support</artifactId>
-				<version>${pax-cdi-api.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.ops4j.pax.cdi</groupId>
-				<artifactId>pax-cdi-extension</artifactId>
-				<version>${pax-cdi-api.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<dependencies>
 		<dependency>
 			<scope>compile</scope>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.ops4j.pax.exam</groupId>
-			<artifactId>pax-exam-container-native</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.ops4j.pax.exam</groupId>
-			<artifactId>pax-exam-link-mvn</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.ops4j.pax.url</groupId>
-			<artifactId>pax-url-aether</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.ops4j.pax.url</groupId>
-			<artifactId>pax-url-wrap</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.framework</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jul-to-slf4j</artifactId>
-			<version>1.7.12</version>
-		</dependency>
-		<dependency>
-			<scope>compile</scope>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-interceptor_1.1_spec</artifactId>
-		</dependency>
-		<dependency>
-			<scope>compile</scope>
-			<groupId>javax.enterprise</groupId>
-			<artifactId>cdi-api</artifactId>
-		</dependency>
-		<dependency>
-			<scope>compile</scope>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-jta_1.1_spec</artifactId>
-		</dependency>
-		<dependency>
-			<scope>compile</scope>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-validation_1.0_spec</artifactId>
-		</dependency>
-		<dependency>
-			<scope>compile</scope>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-servlet_3.0_spec</artifactId>
-		</dependency>
-		<dependency>
-			<scope>compile</scope>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-el_2.2_spec</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.ops4j.pax.cdi</groupId>
-			<artifactId>pax-cdi-openwebbeans</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.ops4j.pax.cdi</groupId>
-			<artifactId>pax-cdi-test-support</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.ops4j.pax.cdi</groupId>
-			<artifactId>pax-cdi-extension</artifactId>
+			<artifactId>pax-exam</artifactId>
 		</dependency>
 	</dependencies>
 
